@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.amber"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <activity
+            android:name="com.example.amber.MainActivity"
+            android:label="@string/app_name"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.amber.SlotActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.amber.about.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:noHistory="true" >
+        </activity>
+        <activity
+            android:name="com.example.amber.search.LayoutActivity"
+            android:label="@string/title_activity_layout" >
+        </activity>
+        <activity
+            android:name="com.example.amber.view.ViewReservedActivity"
+            android:label="@string/title_activity_view_reserved" >
+        </activity>
+        <activity
+            android:name="com.example.amber.view.SlotOperationActivity"
+            android:label="@string/title_activity_slot_operation" >
+        </activity>
+        <activity
+            android:name="com.example.amber.unregister.UnregisteredActivity"
+            android:label="@string/title_activity_unregistered" >
+        </activity>
+        <activity
+            android:name="com.example.amber.search.LevelActivity"
+            android:label="@string/title_activity_level" >
+        </activity>
+        <activity
+            android:name="com.example.amber.search.ViewSlotLayoutActivity"
+            android:label="@string/title_activity_view_slot_layout" >
+        </activity>
+    </application>
+
+</manifest>
