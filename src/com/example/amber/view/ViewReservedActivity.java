@@ -140,14 +140,21 @@ public class ViewReservedActivity extends Activity
 			try 
 			{
 				j=new JSONObject(result);
-				JSONArray jarray=j.getJSONArray("SLOTS");
-				for(int i=0;i<jarray.length();i++)
+				if(j.getString("SLOTS").isEmpty())
 				{
-					JSONObject ij=jarray.getJSONObject(i);
-					String slot=ij.getString("SLOTID");
-					String timeIn=ij.getString("TIMEIN");
-					
-					  list.add(slot+":"+timeIn);
+					list.add("You have no reservations at the moment:");
+				}
+				else
+				{
+					JSONArray jarray=j.getJSONArray("SLOTS");
+					for(int i=0;i<jarray.length();i++)
+					{
+						JSONObject ij=jarray.getJSONObject(i);
+						String slot=ij.getString("SLOTID");
+						String timeIn=ij.getString("TIMEIN");
+						
+						  list.add(slot+":"+timeIn);
+					}
 				}
 			} 
 			catch (JSONException e)

@@ -8,6 +8,9 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -102,7 +105,21 @@ public class UnregisteredActivity extends Activity {
 		{
 			setContentView(R.layout.activity_unregistered);
 			TextView tv=(TextView)findViewById(R.id.textView1);
-			tv.setText(result);
+//			tv.setText(result);
+			try {
+				JSONObject j=new JSONObject(result);
+				if(j.getString("OUTPUT").equals("error"))
+				{
+					tv.setText("Couldn't compute.Please wait for one minute and try again");
+				}
+				else
+				{
+					tv.setText("Total fare :"+j.getString("FARE"));
+				}
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	    }
 	}
 	@Override

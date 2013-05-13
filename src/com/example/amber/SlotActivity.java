@@ -19,6 +19,7 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.KeyEvent;
 import android.view.Menu;
+import android.view.View;
 import android.widget.TextView;
 
 public class SlotActivity extends Activity 
@@ -30,6 +31,7 @@ public class SlotActivity extends Activity
 		setContentView(R.layout.activity_slot);
 		textView=(TextView)findViewById(R.id.textView2);
 		textView.setText(getUserID());
+		textView.setVisibility(View.INVISIBLE);
 	}
 
 	@Override
@@ -65,7 +67,7 @@ public class SlotActivity extends Activity
         String payload=new String(msg.getRecords()[0].getPayload());
         payload=payload.split("en")[1];
         textView.setText(payload);
-        
+        textView.setVisibility(View.INVISIBLE);
         new RegisterSlotTask().execute(payload+":"+getUserID());
     }
 	
@@ -152,8 +154,12 @@ public class SlotActivity extends Activity
 		@Override
 	    protected void onPostExecute(String result) 
 		{
-			 TextView textView = new TextView(SlotActivity.this);
-			  textView.setTextSize(40);
+			setContentView(R.layout.activity_slot);
+			
+			textView=(TextView)findViewById(R.id.textView2);
+			textView.setVisibility(View.INVISIBLE);
+			
+			  textView = (TextView)findViewById(R.id.textView1);
 			  textView.setText(result);
 	    }
 		

@@ -48,6 +48,17 @@ public class LayoutActivity extends Activity
 			tv=(TextView)findViewById(R.id.textView3);
 			tv.setText("Longitude"+lastloc.getLongitude());
 			tv.setVisibility(View.INVISIBLE);
+			
+			tv=(TextView)findViewById(R.id.textView2);
+			tv.setText("Layouts near you");
+			tv.setVisibility(View.VISIBLE);
+			
+		}
+		else
+		{
+			tv=(TextView)findViewById(R.id.textView2);
+			tv.setText("All available layouts");
+			tv.setVisibility(View.VISIBLE);
 		}
 		
 		new LayoutFetchTask().execute("http://192.168.1.2:8888/parking/FinalYearProject/public/Layout");
@@ -149,8 +160,10 @@ public class LayoutActivity extends Activity
 				{
 					JSONObject ij=jarray.getJSONObject(i);
 					String slot=ij.getString("LAYOUTID");
-					String timeIn=ij.getString("LAYOUTNAME");
-					list.add(slot+":"+timeIn);
+					String name=ij.getString("LAYOUTNAME");
+					String area=ij.getString("AREA");
+					String city=ij.getString("CITY");
+					list.add(slot+":"+name+":"+area+":"+city);
 				}
 			} 
 			catch (JSONException e)
