@@ -44,13 +44,13 @@ public class LayoutActivity extends Activity
 		{
 			tv=(TextView)findViewById(R.id.textView2);
 			tv.setText("Latitude"+lastloc.getLatitude());
-			tv.setVisibility(View.INVISIBLE);
+			tv.setVisibility(View.GONE);
 			tv=(TextView)findViewById(R.id.textView3);
 			tv.setText("Longitude"+lastloc.getLongitude());
-			tv.setVisibility(View.INVISIBLE);
+			tv.setVisibility(View.GONE);
 			
 			tv=(TextView)findViewById(R.id.textView2);
-			tv.setText("Layouts near you");
+			tv.setText("Layouts near you :");
 			tv.setVisibility(View.VISIBLE);
 			
 		}
@@ -74,9 +74,9 @@ public class LayoutActivity extends Activity
 	}
 
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.layout, menu);
+	public boolean onCreateOptionsMenu(Menu menu)
+	{
+//		getMenuInflater().inflate(R.menu.layout, menu);
 		return true;
 	}
 	@Override
@@ -130,7 +130,7 @@ public class LayoutActivity extends Activity
 		        }
 				else
 				{
-					res="Conn Error";
+					res="Connection Error";
 		        }
 			} 
 			catch (MalformedURLException e) 

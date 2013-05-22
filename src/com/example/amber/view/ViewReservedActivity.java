@@ -25,7 +25,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.example.amber.MainActivity;
 import com.example.amber.R;
@@ -37,7 +36,7 @@ public class ViewReservedActivity extends Activity
 	protected void onCreate(Bundle savedInstanceState) 
 	{
 		super.onCreate(savedInstanceState);
-		
+		setContentView(R.layout.activity_layout);
 		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy);
 		
@@ -83,9 +82,6 @@ public class ViewReservedActivity extends Activity
 		protected void onPreExecute() 
 		{
 		      super.onPreExecute();
-		      TextView textView = new TextView(ViewReservedActivity.this);
-			  textView.setTextSize(40);
-			  textView.setText("Loading..");
 		      
 		}
 		@Override

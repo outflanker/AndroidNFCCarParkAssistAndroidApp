@@ -13,8 +13,23 @@
         android:id="@+id/listView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:divider="#FFFFFF"
+        android:dividerHeight="1dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true" >
     </ListView>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        
+        android:typeface="monospace"
+        android:textColor="#FFFFFF"
+        
+        android:text="@string/main_title"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

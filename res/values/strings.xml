@@ -5,23 +5,17 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_slot">SlotActivity</string>
-    <string name="title_activity_about">AboutActivity</string>
+    <string name="title_activity_about">About</string>
     <string name="blank_string">Settings</string>
-    <string name="about">		 This application assists you to to locate parking spots based 
-		 on your GPS location through your phone. 
-		 Then using NFC you can park your car and automate the billing.\n
-		 This was developed for VTU final year project by:\n
-		 Nitin K Bhat\n
-		 Sphoorti Biradar\n
-		 Shamyak S Moorthy\n
-		 Siddharth Krishna Sinha\n
-		 Thank you.\n</string>
-    <string name="about_title">About the app</string>
-    <string name="title_activity_layout">LayoutActivity</string>
-    <string name="title_activity_view_reserved">ViewReservedActivity</string>
-    <string name="title_activity_slot_operation">SlotOperationActivity</string>
-    <string name="title_activity_unregistered">UnregisteredActivity</string>
-    <string name="title_activity_level">LevelActivity</string>
-    <string name="title_activity_view_slot_layout">ViewSlotLayoutActivity</string>
-
+    <string name="about">This application assists you to to locate parking spots based on a localised GPS based search using your device\'s location. Registering the parking slot and billing are automated using the NFC technology.\n\n\nThis was developed for VTU final year project by:\n1.Nitin K Bhat\n2.Sphoorti Biradar\n3.Shamyak S Moorthy\n4.Siddharth Krishna Sinha\nThank you.\n</string>
+    <string name="about_title">About this app!</string>
+    <string name="title_activity_layout">Layouts</string>
+    <string name="title_activity_view_reserved">Reserved Slots</string>
+    <string name="title_activity_slot_operation">Slot Operation</string>
+    <string name="title_activity_unregistered">Unregister</string>
+    <string name="title_activity_level">Levels</string>
+    <string name="title_activity_view_slot_layout">Slots Layout</string>
+	<string name="main_title">NFC CAR PARK</string>
+	<string name="your_reservations">Your parking reservations :</string>
+	<string name="level_heading">Parking levels :</string>
 </resources>

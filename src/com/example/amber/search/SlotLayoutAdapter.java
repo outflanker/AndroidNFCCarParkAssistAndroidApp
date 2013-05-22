@@ -16,9 +16,14 @@ public class SlotLayoutAdapter extends BaseAdapter {
     private Context mContext;
     private Integer[] mThumbIds;
     private int columns;
-    private Integer Icon0=R.drawable.car_0;
-    private Integer Icon1=R.drawable.car_2;
-    private Integer Icon2=R.drawable.car_4;
+//    private Integer Icon0=R.drawable.car_0;
+//    private Integer Icon1=R.drawable.car_2;
+//    private Integer Icon2=R.drawable.car_4;
+    
+
+    private Integer Icon0=R.drawable.eco_black_car_icon;
+    private Integer Icon1=R.drawable.eco_green_car_icon;
+    private Integer Icon2=R.drawable.eco_red_car_icon;
     
     public SlotLayoutAdapter(Context c,ArrayList<Integer> types,int numColumns) 
     {
@@ -61,7 +66,7 @@ public class SlotLayoutAdapter extends BaseAdapter {
         ImageView imageView;
         if (convertView == null) {  // if it's not recycled, initialize some attributes
             imageView = new ImageView(mContext);
-            imageView.setLayoutParams(new GridView.LayoutParams((int)750/columns, 750/columns));
+            imageView.setLayoutParams(new GridView.LayoutParams((int)730/columns, 730/columns));
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             imageView.setPadding(8, 8, 8, 8);
         } else {

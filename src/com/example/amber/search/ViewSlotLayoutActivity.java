@@ -127,7 +127,7 @@ public class ViewSlotLayoutActivity extends Activity
 			int col=Integer.parseInt(size);
 			col=col%10;
 			tv.setText(types.toString()+col);
-			tv.setVisibility(View.INVISIBLE);
+			tv.setVisibility(View.GONE);
 			GridView gridview = (GridView) findViewById(R.id.gridView1);
 			gridview.setNumColumns(col);
 			gridview.setAdapter(new SlotLayoutAdapter(ViewSlotLayoutActivity.this,types,col));

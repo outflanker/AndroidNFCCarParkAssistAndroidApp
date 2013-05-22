@@ -4,7 +4,11 @@ import java.util.HashMap;
 import java.util.List;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
 public class ViewReservationsAdapter extends ArrayAdapter<String>
 {
@@ -29,5 +33,13 @@ public class ViewReservationsAdapter extends ArrayAdapter<String>
     @Override
     public boolean hasStableIds() {
       return true;
+    }
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent)
+    {
+        View v = super.getView(position, convertView, parent);
+            ((TextView) v).setTextColor(Color.WHITE); 
+            ((TextView) v).setTextSize(20);
+        return v;
     }
 } 

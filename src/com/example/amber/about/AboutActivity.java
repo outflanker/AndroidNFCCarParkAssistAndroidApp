@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
-import android.view.Menu;
 
 import com.example.amber.MainActivity;
 import com.example.amber.R;
@@ -17,12 +16,12 @@ public class AboutActivity extends Activity {
 		setContentView(R.layout.activity_about);
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.about, menu);
-		return true;
-	}
+//	@Override
+//	public boolean onCreateOptionsMenu(Menu menu) {
+//		// Inflate the menu; this adds items to the action bar if it is present.
+//		getMenuInflater().inflate(R.menu.about, menu);
+//		return true;
+//	}
 	@Override
     public boolean onKeyDown(int keyCode, KeyEvent event) 
 	{
